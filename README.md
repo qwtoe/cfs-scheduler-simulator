@@ -64,7 +64,7 @@ brew install ncurses
 sudo apt-get install libncurses5-dev libncursesw5-dev
 
 # Clone repository
-git clone https://github.com/yourusername/cfs-scheduler-simulator.git
+git clone https://github.com/qwtoe/cfs-scheduler-simulator.git
 cd cfs-scheduler-simulator
 
 # Build project (auto-creates bin directory)
@@ -84,10 +84,6 @@ bin/cfs_simulator
 |`1-9`|Load scenario preset|Predefined test cases|
 |SPACE|Pause/resume simulation|Freeze current state for inspection|
 |`q`|Quit application|Exit simulator|
-
-
-
-
 
 ## 📚 Learning Resources
 
@@ -170,5 +166,5 @@ This project is licensed under the MIT License - see the [LICENSE](https://gith
 
 ---
 
-Making the invisible visible - one vruntime at a time! ✨
+**Making the invisible visible - one vruntime at a time!** ✨  
 Experience Linux's scheduling magic from the comfort of your terminal.
