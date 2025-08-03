@@ -44,7 +44,7 @@ make && bin/cfs_simulator
 - **Pause/resume**: Spacebar to freeze simulation for detailed inspection
 
 ## 🛠️ Technical Architecture
-!()[/source/architecture.png]
+![](/source/architecture.png)
 
 
 ## 🚀 Getting Started
