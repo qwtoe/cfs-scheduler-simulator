@@ -164,6 +164,10 @@ python3 analysis/report_generator.py scheduler.log
 - Scheduling latency distribution
 - Fairness deviation metrics (using standard deviation)
 
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/qwtoe/cfs-scheduler-simulator/blob/main/LICENSE) file for details.
+
 ---
 
 Making the invisible visible - one vruntime at a time! ✨
