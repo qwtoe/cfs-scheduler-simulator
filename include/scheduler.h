@@ -4,28 +4,29 @@
 #include <vector>
 #include <chrono>
 
-class Scheduler {
+class Scheduler
+{
 public:
     Scheduler();
-    
-    // 添加新任务
-    void add_task(Task* task);
-    
-    // 执行调度循环
+
+    // add a task to the scheduler
+    void add_task(Task *task);
+
+    // execute the scheduling logic
     void schedule();
-    
-    // 获取所有任务
-    const std::vector<Task*>& get_tasks() const { return tasks; }
-    
-    // 获取红黑树
-    const RBTree& get_rbtree() const { return rbtree; }
-    RBTree& get_rbtree() { return rbtree; }
+
+    // get all tasks
+    const std::vector<Task *> &get_tasks() const { return tasks; }
+
+    // get the red-black tree
+    const RBTree &get_rbtree() const { return rbtree; }
+    RBTree &get_rbtree() { return rbtree; }
 
 private:
-    RBTree rbtree;                   // CFS 红黑树
-    std::vector<Task*> tasks;         // 所有任务
+    RBTree rbtree;             // CFS red-black tree
+    std::vector<Task *> tasks; // all tasks in the scheduler
     std::chrono::steady_clock::time_point last_run;
-    
-    // 时间片大小 (毫秒)
+
+    // time slice for each scheduling decision in milliseconds
     static const int TIME_SLICE = 50;
 };
