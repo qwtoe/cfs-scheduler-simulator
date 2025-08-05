@@ -1,18 +1,20 @@
 #pragma once
 #include <string>
 
-enum class TaskType {
+enum class TaskType
+{
     CPU_BOUND,
     IO_BOUND
 };
 
-class Task {
+class Task
+{
 public:
     Task(int id, TaskType type, int priority, int duration_ms);
-    
-    // 执行任务一个时间片
+
+    // excute a task for a given time slice
     void execute(int time_slice);
-    
+
     // Getters
     int get_id() const { return id; }
     double get_vruntime() const { return vruntime; }
@@ -23,14 +25,14 @@ public:
     bool is_completed() const { return completed; }
 
 private:
-    int id;                 // 任务ID
-    TaskType type;          // 任务类型
-    int priority;           // 优先级 (nice值)
-    double vruntime;        // 虚拟运行时间
-    int duration_ms;        // 总需要时间
-    int executed_ms = 0;    // 已执行时间
-    bool completed = false; // 是否完成
+    int id;                 // task ID
+    TaskType type;          // task type (CPU_BOUND or IO_BOUND)
+    int priority;           // priority
+    double vruntime;        // virtual runtime
+    int duration_ms;        // total duration in milliseconds
+    int executed_ms = 0;    // time already executed in milliseconds
+    bool completed = false; // is the task completed
 
-    // 根据优先级计算权重
+    // get the weight of the task based on its priority
     int get_weight() const;
 };
